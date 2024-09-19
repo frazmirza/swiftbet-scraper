@@ -1,9 +1,10 @@
-import requests
-import json
-from datetime import datetime, timedelta
-import pandas as pd
-import random
 import ast
+import json
+import random
+from datetime import datetime, timedelta
+
+import pandas as pd
+import requests
 
 from Bot import Scraper
 
@@ -34,7 +35,8 @@ class RaceScraper:
 
     def fetch_race_data(self, date):
         """Fetch race data from the API for a specific date."""
-        url = f"https://api.swiftbet.com.au/api/v2/combined/meetings/races?order=true&date={date}"
+        url = "https://api.swiftbet.com.au/api/v2/combined/meetings/races?"
+        url += f"order=true&date={date}"
         print(f"Fetching data for {date} from: {url}")
         res = requests.get(url)
         return json.loads(res.text)
@@ -100,4 +102,3 @@ if __name__ == "__main__":
         f"https://www.swiftbet.com.au/racing/all/{random_date}", random_race_url
     )
     scraper.run()
-

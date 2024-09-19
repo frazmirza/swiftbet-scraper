@@ -1,6 +1,7 @@
-import pandas as pd
-import random
 import ast
+import random
+
+import pandas as pd
 
 
 class RaceData:

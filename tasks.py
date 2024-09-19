@@ -1,7 +1,7 @@
 from celery import shared_task
 
 from Bot import Scraper
-from main import RaceScraper, RaceData
+from main import RaceData, RaceScraper
 
 
 @shared_task
