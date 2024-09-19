@@ -1,0 +1,2 @@
+# swiftbet-scraper
+swiftbet
