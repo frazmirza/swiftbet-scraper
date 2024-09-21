@@ -8,7 +8,7 @@ from main import RaceData, RaceScraper
 def run_race_scraper():
     scraper = RaceScraper()
     scraper.run()
-    # Example usage
+    # Example usages
     csv_file = "df_races_data.csv"
     race_data = RaceData(csv_file)
 
@@ -20,4 +20,4 @@ def run_race_scraper():
         f"https://www.swiftbet.com.au/racing/all/{random_date}", random_race_url
     )
     scraper.run()
-    return "Scraped Done!!!!"
+    return "Scraper Done!!!!"
