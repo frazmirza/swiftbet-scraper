@@ -172,3 +172,4 @@ media
 venv
 .vscode
 /.idea/
+.CSV

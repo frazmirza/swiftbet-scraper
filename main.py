@@ -1,5 +1,6 @@
 import ast
 import json
+import os
 import random
 from datetime import datetime, timedelta
 
@@ -74,7 +75,14 @@ class RaceScraper:
     def save_data(self, filename="df_races_data.csv"):
         """Save the collected race data into a CSV file."""
         df_races_data = pd.DataFrame(self.data_list)
-        df_races_data.to_csv(filename, index=False)
+        # Specify the folder where you want to save the CSV
+        folder_path = "CSV"
+        # Create the folder if it doesn't exist
+        os.makedirs(folder_path, exist_ok=True)
+        # Construct the full file path
+        full_path = os.path.join(folder_path, filename)
+        # Save the DataFrame to the specified path
+        df_races_data.to_csv(full_path, index=False)
 
     def run(self):
         """Run the entire scraping process for both today and tomorrow."""
@@ -91,7 +99,7 @@ if __name__ == "__main__":
     scraper.run()
 
     # Example usage
-    csv_file = "df_races_data.csv"
+    csv_file = "CSV/df_races_data.csv"
     race_data = RaceData(csv_file)
 
     random_record = race_data.select_random_record()
