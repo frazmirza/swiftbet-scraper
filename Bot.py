@@ -15,6 +15,15 @@ class WebDriverManager:
         # options.add_argument('--headless')  # Uncomment for headless mode
         self.options.add_argument("--disable-gpu")
         self.options.add_argument("--no-sandbox")
+        # # Add a random User-Agent
+        # ua = UserAgent()
+        # user_agent = ua.random  # Generate a random User-Agent
+        # self.options.add_argument(f"user-agent={user_agent}")
+        # Fake IP address (using a proxy server for this purpose)
+        # Replace this with an actual proxy IP address
+        # or a dynamic method to get proxy IPs
+        # fake_ip = "YUR IP Add"
+        # self.options.add_argument(f"--proxy-server={fake_ip}")
         self.driver = None
 
     def init_driver(self):
