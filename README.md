@@ -59,8 +59,7 @@ python main.py
 <h2>GitHub Actions for Code Formatting</h2>
 <p>We have included <strong>GitHub Actions</strong> to automatically check the code formatting and style using <code>flake8</code> and <code>isort</code>.</p>
 
-<h3>Adding GitHub Action for Linting</h3>
-<p>Create a new file <code>.github/workflows/lint.yml</code> with the following content:</p>
+<h3>GitHub Action for Linting</h3>
 
 <pre><code>
 name: Linting
