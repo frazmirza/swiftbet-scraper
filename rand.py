@@ -19,7 +19,7 @@ class RaceData:
 
 
 # Example usage
-csv_file = "df_races_data.csv"
+csv_file = "CSV/df_races_data.csv"
 race_data = RaceData(csv_file)
 
 random_record = race_data.select_random_record()
